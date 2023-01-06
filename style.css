@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
+
+:root {
+  --red-desaturated: hsl(0, 36%, 70%);
+  --red-soft: hsl(0, 93%, 68%);
+  --grayish-dark-red: hsl(0, 6%, 24%);
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--red-desaturated);
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  z-index: 1;
+}
+
+.logo {
+  background-image: url(images/logo.svg);
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 40px;
+  margin-bottom: 150px;
+}
+
+.left-container {
+  margin: 40px 100px;
+  flex: 1.1;
+}
+.title {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 15px;
+  line-height: 70px;
+  margin-bottom: 40px;
+}
+.coming {
+  font-weight: bold;
+  color: var(--grayish-dark-red);
+}
+
+.description {
+  letter-spacing: 1px;
+  line-height: 25px;
+  width: 450px;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  width: 520px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+  border: 1px var(--red-desaturated) solid;
+  font-family: inherit;
+  color: var(--red-desaturated);
+  padding: 0 20px;
+}
+.input:focus {
+  outline: 0;
+}
+
+.input::placeholder {
+  color: var(--red-desaturated);
+  opacity: 0.7;
+}
+
+button {
+  right: 0;
+  position: absolute;
+  font-size: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border-radius: 25px;
+  background-color: var(--red-soft);
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+  transition: all 0.1s ease-in;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.right-container {
+  flex: 1;
+  background-image: url(images/hero-desktop.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
